@@ -1,0 +1,119 @@
+.section-padding {
+    padding: 100px 0;
+}
+
+.post-meta {
+    li {
+        display: inline-block;
+        margin-right: 10px;
+        position: relative;
+
+        &:last-child {
+            margin-right: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            transform: translateY(-50%);
+            right: -15px;
+            background-color: $white;
+            width: 7px;
+            height: 2px;
+        }
+
+        i {
+            margin-right: 3px;
+        }
+    }
+}
+
+.overlay {
+    position: relative;
+
+    &:after {
+        background: #0c314e none repeat scroll 0 0;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.overlay-effect {
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 49, 78, .9);
+}
+
+.custom-btn {
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: $base1;
+    color: $white;
+    transition: $transition;
+}
+
+.review {
+    li {
+        display: inline-block;
+        margin-right: 4px;
+
+        i {
+            color: $base1;
+        }
+    }
+}
+
+.menu-fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: $white !important;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, .1);
+}
+
+.pagination {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        margin-right: 8px;
+
+        @include breakpoint(mobile-sm) {
+            margin-right: 8px;
+            margin-bottom: 25px;
+        }
+
+        a {
+            float: inherit;
+            margin: 0px;
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 22px;
+            color: #53677d;
+            border: 1px solid #dbdbdb;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px;
+            padding: 7px 15px;
+
+        }
+    }
+}
